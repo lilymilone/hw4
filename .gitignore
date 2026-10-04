@@ -1,0 +1,25 @@
+# --- Never commit these (assignment rule) ---
+# Real secrets
+.env
+.env.*
+!.env.example
+backend/.session_secret
+# The data pack stays local: database and product images
+data/
+*.db
+*.db-journal
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# --- Node / Vite ---
+node_modules/
+dist/
+
+# --- Local tools and OS files ---
+.claude/
+.DS_Store
+output/audit_trail.unappended.jsonl

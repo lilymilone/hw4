@@ -1,0 +1,11 @@
+# Back end for the Campus Customs store (backend/). Install from the hw4/ folder:
+#   pip install -r requirements.txt
+# Tested with Python 3.14; needs Python 3.10 or newer.
+
+# Web API: products, photos, accounts and the chat route (backend/main.py)
+fastapi>=0.115,<1
+uvicorn[standard]>=0.30
+# Signs the login session cookie so it can't be forged
+itsdangerous>=2.1
+# The shop assistant agent and its OpenAI model (backend/agent.py, tools.py, models.py)
+pydantic-ai-slim[openai]>=2.53,<3

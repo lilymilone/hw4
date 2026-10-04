@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Campus Customs: Site testing (app check)</title>
+  <style>
+    body { margin: 0; background: #f3f6fa; color: #1b2333; font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; }
+    main { max-width: 1100px; margin: 0 auto; padding: 2.5rem 1.5rem 4rem; }
+    h1 { margin: 0 0 0.3rem; color: #00356b; font-family: Georgia, "Times New Roman", serif; font-size: 2.1rem; }
+    .meta { margin: 0 0 2.5rem; color: #5b6577; }
+    section { margin: 0 0 2.5rem; padding: 1.6rem 1.8rem 1.4rem; background: #fff; border: 1px solid #dde3ec; border-top: 5px solid #00356b; border-radius: 12px; }
+    h2 { margin: 0 0 1rem; color: #00356b; font-family: Georgia, "Times New Roman", serif; font-size: 1.45rem; }
+    img { display: block; width: 100%; height: auto; border: 1px solid #dde3ec; border-radius: 8px; }
+    p.caption { margin: 1rem 0 0; font-size: 1.05rem; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>Campus Customs: Site testing (app check)</h1>
+  <p class="meta">Tested on the live site (React front end + FastAPI backend + campus_customs.db, running locally) on October 2, 2026, as a guest shopper in Google Chrome. Click any screenshot to open it full size.</p>
+
+  <section id="check-1">
+    <h2>Check 1: Chat checks an item's inventory level (honest stock and price from the database)</h2>
+    <a href="app_check_images/inventory.png"><img src="app_check_images/inventory.png" alt="Professor Dan's chat answering the price and stock in every size of the Fencing Left Chest Hoodie"></a>
+    <p class="caption">Asked how many Fencing Left Chest Hoodies are left, the chat answered <strong>$68</strong>, with XS, L and XXL sold out and 12 in S, 15 in M and 2 in XL. That's exactly the price in the <code>catalogue</code> table and the six rows for this hoodie in the <code>inventory</code> table of campus_customs.db.</p>
+  </section>
+
+  <section id="check-2">
+    <h2>Check 2: Dynamic search-result cards appear after a category question (hoodies)</h2>
+    <a href="app_check_images/search_cards.png"><img src="app_check_images/search_cards.png" alt="After asking 'What hoodies do you have?', the Products page shows a Hoodies banner with 27 matching product cards"></a>
+    <p class="caption">After the question “What hoodies do you have?”, the site switched to the Products page and showed a <strong>“Hoodies: 27 items match”</strong> banner with all 27 hoodie cards (image, name, price and a short description), the same 27 hoodies that are in the catalogue. Each card opens that product's single-item page when clicked.</p>
+  </section>
+
+  <section id="check-3">
+    <h2>Check 3: Usability feature from Problem 9, “My size”</h2>
+    <a href="app_check_images/my_size.png"><img src="app_check_images/my_size.png" alt="Products page with My size set to L: each hockey item's card shows its size-L stock, three marked Sold out"></a>
+    <p class="caption">With <strong>My size</strong> set to L, every product card shows its size-L stock straight from the inventory table: 3 of the 5 hockey items say “Your size L: Sold out” in red, and the others show 12 and 25 in stock. A shopper sees what they can actually buy without opening each item.</p>
+  </section>
+</main>
+</body>
+</html>
