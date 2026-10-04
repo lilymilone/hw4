@@ -162,6 +162,10 @@
 
 > Hi! Problem 13 is called "Push to GitHub and submit the URL." For this, I need you to put the code in the folder named hw4 and push it to a PUBLIC GitHub repository. I will need to submit that repo URL (the link graders can open and clone) on my school's Canvas page. I am not uploading a zip for this homework. My assignment instructions say to NOT put my real .env, campus_customs.db, or product images in the GitHub repo. Use .gitignore. Include .env.example with placeholders only. Attached is the expected file layout. Also, I want you to know this: the agent itself is FOUR files under backend/: prompts/prompt.md, agent.py, tools.py, and models.py. README.md should explain how to run the front end and back end after placing the data back. This is all graded!! Thank you.
 
+### Follow-up prompt
+
+> Done. (after creating the empty public repo `hw4` on github.com)
+
 ### What was lacking after the first prompt
 
 > Nothing was lacking in the prompt: it gave the layout, what must stay out of git, the .env.example and README requirements and the four agent files. The only gap was on the computer: the GitHub command-line tool isn't installed, so the empty public repo had to be created on github.com before the code could be pushed.
